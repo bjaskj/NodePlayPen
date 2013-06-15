@@ -1,0 +1,17 @@
+doctype 5
+html(ng-app)
+    head
+    title= title
+    link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:400,700')
+    link(rel='stylesheet', href='/bundles/stylesheets/style.css')
+    body
+        block content
+    article(ng-controller='UserController')
+        h1 Users
+        ul
+            li(ng-repeat='user in users')
+                {{user.name}}
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js')
+    script(src='/bundles/scripts/controllers/users.js')
